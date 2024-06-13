@@ -1,0 +1,98 @@
+html {
+    background-color: rgba(11,14,58,1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+
+}
+
+h1 {
+    color: #8A2BE2; /* Fiolet */
+}
+
+h2 {
+    color: #1E90FF; /* Granat */
+}
+
+a {
+    color: #8A2BE2;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: #ffffff;
+}
+
+#starDetails img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* styles.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.constellation-info {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.constellation-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.constellation-info li {
+    margin: 5px 0;
+    color: white;
+}
+
+
+/*STARS*/
+#stars, #constellations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#stars div, #constellations div {
+    border: 1px solid #444;
+    margin: 10px;
+    padding: 10px;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#stars img, #constellations img {
+    min-width: 50%;
+    max-width: 100%;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocne Niebo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Witamy w Nocnym Niebie</h1>
+    <a href="nightsky.html">Przejdź do nieba</a>
+
+    <h2>Gwiazdy</h2>
+    <div id="stars"></div>
+
+    <h2 id="addStarLabel">Dodaj Nową Gwiazdę</h2>
+    <form id="addStarForm">
+        <label for="name">Nazwa:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="description">Opis:</label>
+        <input type="text" id="description" name="description" required><br>
+        <label for="image_url">URL Obrazu:</label>
+        <input type="url" id="image_url" name="image_url" required><br>
+        <button type="submit">Dodaj Gwiazdę</button>
+        <button type="button" onclick="cancelAddStar()">Anuluj</button>
+    </form>
+
+    <h2 class="hidden" id="editStarTitle">Edytuj Gwiazdę</h2>
+    <form id="editStarForm" class="hidden">
+        <input type="hidden" id="editStarId" name="id">
+        <label for="editStarName">Nazwa:</label>
+        <input type="text" id="editStarName" name="name" required><br>
+        <label for="editStarDescription">Opis:</label>
+        <input type="text" id="editStarDescription" name="description" required><br>
+        <label for="editStarImageUrl">URL Obrazu:</label>
+        <input type="url" id="editStarImageUrl" name="image_url" required><br>
+        <button type="submit">Edytuj Gwiazdę</button>
+        <button type="button" onclick="cancelEditStar()">Anuluj</button>
+    </form>
+
+    <h2 class="hidden" id="assignStarTitle">Przypisz Gwiazdę do Konstelacji</h2>
+    <form id="assignStarForm" class="hidden">
+        <input type="hidden" id="assignStarId" name="starId">
+        <label for="constellationSelect">Wybierz Konstelację:</label>
+        <select id="constellationSelect" name="constellationId"></select><br>
+        <button type="submit">Przypisz</button>
+        <button type="button" onclick="cancelAssignStar()">Anuluj</button>
+    </form>
+
+    <h2>Konstelacje</h2>
+    <div id="constellations"></div>
+
+    <h2 id="addConstellationLabel">Dodaj Nową Konstelację</h2>
+    <form id="addConstellationForm">
+        <label for="constellationName">Nazwa:</label>
+        <input type="text" id="constellationName" name="name" required><br>
+        <label for="constellationDescription">Opis:</label>
+        <input type="text" id="constellationDescription" name="description" required><br>
+        <label for="constellationImageUrl">URL Obrazu:</label>
+        <input type="url" id="constellationImageUrl" name="image_url" required><br>
+        <button type="submit">Dodaj Konstelację</button>
+        <button type="button" onclick="cancelAddConstellation()">Anuluj</button>
+    </form>
+
+    <h2 class="hidden" id="editConstellationTitle">Edytuj Konstelację</h2>
+    <form id="editConstellationForm" class="hidden">
+        <input type="hidden" id="editConstellationId" name="id">
+        <label for="editConstellationName">Nazwa:</label>
+        <input type="text" id="editConstellationName" name="name" required><br>
+        <label for="editConstellationDescription">Opis:</label>
+        <input type="text" id="editConstellationDescription" name="description" required><br>
+        <label for="editConstellationImageUrl">URL Obrazu:</label>
+        <input type="url" id="editConstellationImageUrl" name="image_url" required><br>
+        <button type="submit">Edytuj Konstelację</button>
+        <button type="button" onclick="cancelEditConstellation()">Anuluj</button>
+    </form>
+</div>
+</div>
+
+<script src="/js/scripts.js"></script>
+</body>
+</html>

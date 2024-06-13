@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocne Niebo</title>
+    <link rel="stylesheet" href="/css/nightsky.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Księżyc -->
+    <div class="sphere">
+        <div class="light hemisphere"></div>
+        <div class="dark hemisphere"></div>
+        <div class="divider"></div>
+    </div>
+
+    <div class="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+
+    <div class="back-row-toggle splat-toggle">
+        <div class="rain front-row"></div>
+    </div>
+
+    <h2>Ustawienia Nocnego Nieba</h2>
+    <a href="index.html">Powrót do strony głównej</a>
+    <form id="nightSkyForm">
+        <label for="cloudLevel">Poziom Chmur (0-3):</label>
+        <input type="number" id="cloudLevel" name="cloudLevel" min="0" max="3" required><br>
+        <label for="moonPhase">Faza Księżyca:</label>
+        <select id="moonPhase" name="moonPhase" required>
+            <option value="New Moon">Nów</option>
+            <option value="First Quarter">Pierwsza Kwadra</option>
+            <option value="Full Moon">Pełnia</option>
+            <option value="Last Quarter">Ostatnia Kwadra</option>
+        </select><br>
+        <label for="precipitation">Opady:</label>
+        <select id="precipitation" name="precipitation">
+            <option value="">Brak</option>
+            <option value="rain">Deszcz</option>
+        </select><br>
+        <label for="fogLevel">Poziom Mgły (0-10):</label>
+        <input type="number" id="fogLevel" name="fogLevel" min="0" max="10" required><br>
+        <button type="submit">Zaktualizuj Nocne Niebo</button>
+    </form>
+
+    <div id="canvas"></div>
+</div>
+
+<script src="/js/nightsky.js"></script>
+</body>
+</html>
